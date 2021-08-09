@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/MarconcilioSouza/area"
 )
 
 func main() {
