@@ -15,14 +15,8 @@ func titulo(urls ...string) <-chan string {
 
 	for _, url := range urls {
 		go func(url string) {
-
-			resp, erro := http.Get(url)
-			fmt.Println(erro, "ok")
-			fmt.Println(resp, resp.Body, resp.Request.URL)
-
+			resp, _ := http.Get(url)
 			html, _ := ioutil.ReadAll(resp.Body)
-			resp.Body.Close()
-			fmt.Println(html)
 			r, _ := regexp.Compile("<title>(.*?)<\\title>")
 			c <- r.FindStringSubmatch(string(html))[1]
 		}(url)
@@ -32,8 +26,8 @@ func titulo(urls ...string) <-chan string {
 }
 
 func main() {
-	t1 := titulo("https://www.google.com")
-	t2 := titulo("https://www.amazon.com.br")
+	t1 := titulo("https://www.cod3r.com.br", "https://www.google.com")
+	t2 := titulo("https://www.amazon.com.br", "https://www.youtube.com.br")
 
 	fmt.Println("Primeiros:", <-t1, '|', <-t2)
 	fmt.Println("Segundos:", <-t1, '|', <-t2)
