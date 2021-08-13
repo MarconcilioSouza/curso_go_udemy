@@ -8,7 +8,7 @@ type carro struct {
 }
 
 type ferrari struct {
-	carro       // campo anonimo
+	carro       // campos anonimos
 	turboLigado bool
 }
 
@@ -19,4 +19,5 @@ func main() {
 	f.turboLigado = true
 
 	fmt.Printf("A ferrari %s está com turbo ligado? %v\n", f.nome, f.turboLigado)
+	fmt.Println(f)
 }

@@ -1,13 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	nota := notaParaConceito(8)
-	fmt.Println(nota)
-}
+import "fmt"
 
 func notaParaConceito(n float64) string {
 	if n >= 9 && n <= 10 {
@@ -21,4 +14,10 @@ func notaParaConceito(n float64) string {
 	} else {
 		return "E"
 	}
+}
+
+func main() {
+	fmt.Println(notaParaConceito(9.8))
+	fmt.Println(notaParaConceito(6.9))
+	fmt.Println(notaParaConceito(2.1))
 }

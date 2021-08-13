@@ -5,7 +5,7 @@ import "fmt"
 func fatorial(n int) (int, error) {
 	switch {
 	case n < 0:
-		return -1, fmt.Errorf("Número inválido: %d", n)
+		return -1, fmt.Errorf("número inválido: %d", n)
 	case n == 0:
 		return 1, nil
 	default:
@@ -16,11 +16,12 @@ func fatorial(n int) (int, error) {
 
 func main() {
 	resultado, _ := fatorial(5)
-
 	fmt.Println(resultado)
 
 	_, err := fatorial(-4)
 	if err != nil {
 		fmt.Println(err)
 	}
+
+	// Uma solução melhor seria... 	uint!
 }

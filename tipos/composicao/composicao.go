@@ -13,22 +13,21 @@ type luxuoso interface {
 type esportivoLuxuoso interface {
 	esportivo
 	luxuoso
-	//pode adicionar mais métodos
+	// pode adicionar mais métodos
 }
 
-type bmw7 struct{}
+type bwm7 struct{}
 
-func (b bmw7) ligarTurbo() {
-	fmt.Println("Turbo ...")
+func (b bwm7) ligarTurbo() {
+	fmt.Println("Turbo...")
 }
 
-func (b bmw7) fazerBaliza() {
+func (b bwm7) fazerBaliza() {
 	fmt.Println("Baliza...")
 }
 
 func main() {
-	var b esportivoLuxuoso = bmw7{}
-
+	var b esportivoLuxuoso = bwm7{}
 	b.ligarTurbo()
 	b.fazerBaliza()
 }

@@ -21,6 +21,6 @@ func main() {
 	coisa2 = true
 	fmt.Println(coisa2)
 
-	coisa2 = curso{"Golang: Explorando a linguage do Google"}
+	coisa2 = curso{"Golang: Explorando a Linguagem do Google"}
 	fmt.Println(coisa2)
 }

@@ -6,8 +6,9 @@ import (
 )
 
 func main() {
+
 	i := 1
-	for i <= 10 {
+	for i <= 10 { // não tem while em Go
 		fmt.Println(i)
 		i++
 	}
@@ -16,16 +17,20 @@ func main() {
 		fmt.Printf("%d ", i)
 	}
 
+	fmt.Println("\nMisturando... ")
 	for i := 1; i <= 10; i++ {
 		if i%2 == 0 {
-			fmt.Println("Par ")
+			fmt.Print("Par ")
 		} else {
-			fmt.Println("Impar")
+			fmt.Print("Impar ")
 		}
 	}
+
 	for {
-		//laço infinito
+		// laço infinito
 		fmt.Println("Para sempre...")
-		time.Sleep(time.Second * 5)
+		time.Sleep(time.Second)
 	}
+
+	// Veremos o foreach no capítulo de array
 }
